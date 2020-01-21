@@ -13,8 +13,8 @@ class File extends Eloquent
         'message',
         'from_email',
         'to_email',
-        'compressed_file_path',
-        'compressed_file_size',
-        'compressed_file_items'
+        'file_path',
+        'size',
+        'items'
     ];
 }

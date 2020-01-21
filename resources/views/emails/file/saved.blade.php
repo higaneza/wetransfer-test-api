@@ -107,7 +107,7 @@
 
     <div class="section text-center">
         <span>
-            {{ count($file->compressed_file_items) }} item(s), {{ round($file->compressed_file_size / 100000, 2) }} MB in total.
+            {{ count($file->items) }} item(s), {{ round($file->size / 100000, 2) }} MB in total.
             Thanks for using WeTransfer-Test. We'll email you a confirmation as soon as your files have been downloaded.
         </span>
     </div>
@@ -131,8 +131,8 @@
     </div>
 
     <div class="section">
-        <h3 class="title-md">{{ count($file->compressed_file_items) }} item(s)</h3>
-        @foreach ($file->compressed_file_items as $item)
+        <h3 class="title-md">{{ count($file->items) }} item(s)</h3>
+        @foreach ($file->items as $item)
         <p>
             <span>{{ $item->name }}</span>
             <br>
